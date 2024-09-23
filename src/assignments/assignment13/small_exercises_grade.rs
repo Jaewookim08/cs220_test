@@ -140,7 +140,7 @@ mod test {
             assert_about_eq!(res_par, correct, 1.0e-4);
 
             assert!(
-                elapsed_par < elapsed_seq,
+                false,
                 "Sequential: {elapsed_seq:?}, Parallel: {elapsed_par:?}"
             );
         }

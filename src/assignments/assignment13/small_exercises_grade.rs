@@ -105,6 +105,11 @@ mod test {
             assert_eq!(Array::from_vec(res_seq), ans);
             assert_eq!(Array::from_vec(res_par), ans);
             assert!(elapsed_par < elapsed_seq);
+            assert!(
+                false,
+                // elapsed_par < elapsed_seq,
+                "Sequential: {elapsed_seq:?}, Parallel: {elapsed_par:?}"
+            );
         }
     }
 
@@ -242,6 +247,11 @@ mod test {
             // println!("Sequential: {:?}", elapsed_seq);
             // println!("Parallel: {:?}", elapsed_par);
             assert!(elapsed_par < elapsed_seq);
+            assert!(
+                false,
+                // elapsed_par < elapsed_seq,
+                "Sequential: {elapsed_seq:?}, Parallel: {elapsed_par:?}"
+            );
         }
     }
 }
